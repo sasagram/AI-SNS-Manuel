@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI×SNS 運用効率化マニュアル</title>
+<style>
+  body {
+    font-family: "Yu Gothic", "Meiryo", sans-serif;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+  }
+  h1, h2, h3 {
+    color: #004aad;
+  }
+  h1 {
+    border-bottom: 3px solid #004aad;
+    padding-bottom: 10px;
+  }
+  h2 {
+    border-bottom: 2px solid #a3c1ff;
+    padding-bottom: 6px;
+    margin-top: 40px;
+  }
+  h3 {
+    margin-top: 25px;
+  }
+  ul {
+    margin-left: 20px;
+  }
+  code, pre {
+    background: #eef2ff;
+    padding: 8px;
+    border-radius: 5px;
+    font-family: Consolas, monospace;
+    font-size: 0.9em;
+    white-space: pre-wrap;
+  }
+  section {
+    background: #fff;
+    padding: 15px 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  }
+  .prompt-block {
+    background: #e6f4ea;
+    border-left: 4px solid #28a745;
+    padding: 10px 15px;
+    margin: 10px 0;
+    font-style: normal;
+    position: relative;
+  }
+  button.copy-btn {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    border: none;
+    background: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em;
+  }
+  button.copy-btn:hover {
+    background: #1e7e34;
+  }
+  a {
+    color: #004aad;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .tools-list li {
+    margin-bottom: 8px;
+  }
+  nav#toc {
+    background: #ffffffdd;
+    border: 1px solid #ccc;
+    padding: 15px 20px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+  }
+  nav#toc h2 {
+    margin-top: 0;
+  }
+  nav#toc ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  nav#toc li {
+    margin: 8px 0;
+  }
+  nav#toc a {
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<h1>【誰でもできる】AI活用でSNS運用業務を効率化する完全マニュアル</h1>
+
+<nav id="toc" aria-label="目次">
+  <h2>目次</h2>
+  <ul>
+    <li><a href="#intro">はじめに</a></li>
+    <li><a href="#step1">1. 過去投稿データの活用で「伸びる投稿」を分析しよう</a></li>
+    <li><a href="#step2">2. AIに最新トレンドを自動収集＆投稿ネタを確保</a></li>
+    <li><a href="#step3">3. AIで投稿文や動画台本を自動作成しよう</a></li>
+    <li><a href="#step4">4. ショート動画や漫画コンテンツもAIで量産可能！</a></li>
+    <li><a href="#step5">5. AIによる投稿分析で成果を最大化</a></li>
+    <li><a href="#step6">6. 【応用】AIでリプライやコメント対応も自動化</a></li>
+    <li><a href="#tools">おすすめツール一覧</a></li>
+    <li><a href="#summary">まとめ</a></li>
+  </ul>
+</nav>
+
+<section id="intro">
+  <h2>はじめに</h2>
+  <p>このマニュアルは、AIを活用してSNS運用の作業負担を大幅に減らし、集客や採用活動を加速させるための手順をまとめています。<br />
+  技術や専門知識がなくても、手順通りに実践すれば効率よくSNS運用ができるように設計しました。</p>
+</section>
+
+<section id="step1">
+  <h2>1. 過去投稿データの活用で「伸びる投稿」を分析しよう</h2>
+  <h3>目的</h3>
+  <p>自分のSNS投稿でどんな内容が反響を得やすいかAIに分析させ、効率的に投稿内容を決める。</p>
+  <h3>手順</h3>
+  <ul>
+    <li>過去3ヶ月～1年分のSNS投稿をデータとして取得（X、Instagram、YouTubeなど）</li>
+    <li>AIツールにデータを読み込ませて、「人気投稿の特徴」「反応が良いテーマ」を抽出してもらう</li>
+    <li>AIの分析を参考に、今後投稿するテーマや表現方法を決定</li>
+  </ul>
+  <h3>具体的なツールの使い方</h3>
+  <p><strong>ツール：</strong>ChatGPT（有料版推奨）やGPT-4 API</p>
+  <p>1. 投稿データをCSVやテキストで用意し、重要な投稿（反応が多いもの）をまとめます。<br />
+  2. ChatGPTに以下のように入力します。</p>
+  <div class="prompt-block" tabindex="0">
+<pre>以下は私の過去投稿の概要データです。この中で反応が良かった投稿の特徴とテーマを教えてください。
+投稿データ：［ここに投稿内容や概要を記載］
+</pre>
+<button class="copy-btn" onclick="copyPrompt(this)">コピー</button>
+  </div>
+</section>
+
+<section id="step2">
+  <h2>2. AIに最新トレンドを自動収集＆投稿ネタを確保</h2>
+  <h3>目的</h3>
+  <p>旬の情報を見逃さず、話題性のある投稿でフォロワーの関心を高める。</p>
+  <h3>手順</h3>
+  <ul>
+    <li>AIに毎朝最新の業界ニュースやトレンド情報を収集させ、メールやチャットで受け取る設定にする</li>
+    <li>ニュースの見出し・概要・考察をAIに要約してもらう</li>
+    <li>そこに自分の視点や意見を加えた投稿を作成</li>
+  </ul>
+  <h3>具体的なツールの使い方</h3>
+  <p><strong>ツール：</strong>ChatGPTのタスク管理機能、RSSフィード連携ツール（例：IFTTT, Zapier）</p>
+  <p>例：ChatGPTに毎朝8時に「今日のAI関連ニュース5件の見出しと簡単な解説を教えて」と指示。<br />
+  受け取った内容をコピーし、自分の意見を足して投稿文を作成。</p>
+  <div class="prompt-block" tabindex="0">
+<pre>今日の最新AIニュース5件を見出しと概要で教えてください。
+このニュースについて、SNS投稿用にわかりやすく解説してください。
+</pre>
+<button class="copy-btn" onclick="copyPrompt(this)">コピー</button>
+  </div>
+</section>
+
+<section id="step3">
+  <h2>3. AIで投稿文や動画台本を自動作成しよう</h2>
+  <h3>目的</h3>
+  <p>投稿作成の時間を短縮しつつ、一貫したブランドイメージを保つ。</p>
+  <h3>手順</h3>
+  <ul>
+    <li>過去の自分の投稿の文体や特徴をAIに学習させる</li>
+    <li>新しい投稿テーマをAIに伝え、文章や台本の案を作成してもらう</li>
+    <li>出来上がった案を自分の言葉で微調整して投稿する</li>
+  </ul>
+  <h3>具体的なツールの使い方</h3>
+  <p><strong>ツール：</strong>ChatGPT, Jasper AIなど</p>
+  <p>プロンプト例：</p>
+  <div class="prompt-block" tabindex="0">
+<pre>私は○○というジャンルで投稿しています。過去の投稿の一部を以下に示します。文体や口調を真似して、新テーマ『□□』について150文字の投稿文を作ってください。
+過去投稿例：［過去投稿を数件記載］
+</pre>
+<button class="copy-btn" onclick="copyPrompt(this)">コピー</button>
+  </div>
+</section>
+
+<section id="step4">
+  <h2>4. ショート動画や漫画コンテンツもAIで量産可能！</h2>
+  <h3>目的</h3>
+  <p>視覚的に魅力的なコンテンツを簡単に作成し、SNSのエンゲージメントを高める。</p>
+  <h3>手順</h3>
+  <ul>
+    <li>AI画像生成ツールで動画用の画像や漫画のコマを作成</li>
+    <li>音声合成ツールを使いナレーション音声を作成し、動画に組み込む</li>
+    <li>編集ソフトで画像・音声を組み合わせショート動画を完成させ、定期投稿する</li>
+  </ul>
+  <h3>具体的なツールの使い方</h3>
+  <p><strong>画像生成：</strong>Stable Diffusion, Midjourney<br />
+  <strong>音声合成：</strong>Google Text-to-Speech, ElevenLabs<br />
+  <strong>動画編集：</strong>Canva, CapCut</p>
+  <p>例：Midjourneyで「ビジネスマンがAIを使うイラスト」を生成し、ElevenLabsで作成したナレーションをCapCutで編集して動画化。</p>
+</section>
+
+<section id="step5">
+  <h2>5. AIによる投稿分析で成果を最大化</h2>
+  <h3>目的</h3>
+  <p>投稿の効果を数値で把握し、改善ポイントを明確化して次の施策に活かす。</p>
+  <h3>手順</h3>
+  <ul>
+    <li>SNSの反応データ（いいね、シェア、コメント、プロフィールクリック等）をAIに読み込ませる</li>
+    <li>AIが成功のパターンや改善点をレポートとして出力</li>
+    <li>レポートを参考に投稿内容・時間・頻度を調整しPDCAを回す</li>
+  </ul>
+  <h3>具体的なツールの使い方</h3>
+  <p><strong>ツール：</strong>ChatGPT、SNS分析ツール（Twitter Analytics, YouTube Studioなど）</p>
+  <p>分析データをChatGPTに入力して以下のように活用：</p>
+  <div class="prompt-block" tabindex="0">
+<pre>以下のデータをもとに、私のSNS投稿で成功している傾向と改善点を教えてください。
+データ：［いいね数、コメント数、シェア数など］
+</pre>
+<button class="copy-btn" onclick="copyPrompt(this)">コピー</button>
+  </div>
+</section>
+
+<section id="step6">
+  <h2>6. 【応用】AIでリプライやコメント対応も自動化</h2>
+  <h3>目的</h3>
+  <p>フォロワーとの交流を維持しながら、作業負担を減らす。</p>
+  <h3>手順</h3>
+  <ul>
+    <li>よくある質問やコメント例をAIに学習させる</li>
+    <li>AIチャットボットに自動返信文案の作成を任せる</li>
+    <li>必要に応じて人間が内容をチェックしてから返信</li>
+  </ul>
+  <h3>具体的なツールの使い方</h3>
+  <p><strong>ツール：</strong>ManyChat, ChatGPT APIなど</p>
+  <p>事前にFAQを作成しAIに覚えさせておくと、定型的な質問には即座に対応可能です。</p>
+</section>
+
+<section id="tools">
+  <h2>おすすめツール一覧</h2>
+  <ul class="tools-list">
+    <li><strong>ChatGPT (OpenAI)</strong>：文章作成、分析、アイデア出し</li>
+    <li><strong>Stable Diffusion / Midjourney</strong>：画像・漫画作成</li>
+    <li><strong>Google Text-to-Speech / ElevenLabs</strong>：音声合成・ナレーション作成</li>
+    <li><strong>Canva / CapCut</strong>：動画編集・ショート動画作成</li>
+    <li><strong>Buffer / Hootsuite</strong>：投稿スケジュール管理</li>
+    <li><strong>Twitter Analytics / YouTube Studio</strong>：投稿効果分析</li>
+    <li><strong>ManyChat / ChatGPT API</strong>：自動リプライ・チャットボット構築</li>
+  </ul>
+</section>
+
+<section id="summary">
+  <h2>まとめ</h2>
+  <p>このマニュアルに沿ってAIを活用すれば、SNS運用の投稿作成から分析、コミュニケーションまで大幅な効率化が可能です。<br />
+  人の手は「コンセプト設計」と「最終チェック・調整」に集中でき、作業時間とコストの大幅削減につながります。<br />
+  まずは小さな投稿から試し、AIの力を体感しながら段階的に効率化を進めましょう。</p>
+</section>
+
+<script>
+function copyPrompt(button) {
+  const promptText = button.previousElementSibling.innerText;
+  navigator.clipboard.writeText(promptText).then(() => {
+    button.textContent = "コピー完了!";
+    setTimeout(() => {
+      button.textContent = "コピー";
+    }, 1500);
+  });
+}
+</script>
+
+</body>
+</html>
